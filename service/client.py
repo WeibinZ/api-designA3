@@ -13,7 +13,7 @@ def run():
     # of the code.
     with grpc.insecure_channel('localhost:8080') as channel:
         stub = services_pb2_grpc.InventoryServiceStub(channel)
-        response = stub.GetBook(services_pb2.BookRequest(isbn='978-1-56619-909-4'))
+        response = stub.GetBook(services_pb2.BookRequest(isbn='978-1-19982-909-4'))
     print("Inventory client received: " + response.title)
 
 
